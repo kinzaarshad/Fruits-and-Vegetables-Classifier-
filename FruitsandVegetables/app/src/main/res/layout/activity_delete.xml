@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DeleteActivity">
+
+    <ImageView
+        android:id="@+id/resultImage"
+        android:layout_width="match_parent"
+        android:layout_height="600px"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/resultName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/resultImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="50px"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Name:"></TextView>
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/resultName"
+        app:layout_constraintStart_toEndOf="@id/resultName"
+        android:text="fruits name"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        ></EditText>
+
+    <TextView
+        android:id="@+id/resultPriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/resultName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="50px"
+        android:layout_marginTop="50px"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Price per Kg"></TextView>
+
+    <TextView
+        android:id="@+id/resultPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/resultPriceText"
+        app:layout_constraintStart_toEndOf="@id/resultPriceText"
+        android:layout_marginStart="50px"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="0"></TextView>
+
+    <TextView
+        android:id="@+id/resultQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/resultPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="50px"
+        android:layout_marginTop="50px"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Quantity:"></TextView>
+
+    <ImageButton
+        android:id="@+id/lowerbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/resultQuantity"
+        app:layout_constraintStart_toEndOf="@id/resultQuantity"
+        android:src="@android:drawable/arrow_down_float"/>
+
+    <TextView
+        android:id="@+id/quantityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/resultQuantity"
+        app:layout_constraintStart_toEndOf="@id/lowerbutton"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:text="0" />
+
+    <ImageButton
+        android:id="@+id/upperbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/resultQuantity"
+        app:layout_constraintStart_toEndOf="@id/quantityText"
+        android:src="@android:drawable/arrow_up_float"/>
+
+
+    <TextView
+        android:id="@+id/resultTotalPriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/resultQuantity"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="50px"
+        android:layout_marginTop="50px"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Total Price"></TextView>
+
+    <TextView
+        android:id="@+id/resultTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/resultTotalPriceText"
+        app:layout_constraintStart_toEndOf="@id/resultTotalPriceText"
+        android:layout_marginStart="50px"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="0"></TextView>
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/resultTotalPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="edit"></Button>
+
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Delete"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
